@@ -17,6 +17,8 @@ int main(){
     float area1;
     float pib1;
     int turistico1;
+    float densidade1;
+    float pib_percapita1;
   
     printf("Digite os dados da 1º carta: \n");
 
@@ -49,6 +51,12 @@ int main(){
     printf("Digite a quantidade de pontos turisticos da sua cidade: ");
     scanf("%d", &turistico1);
 
+    //Formula para calcular a densidade populacional.
+    densidade1 = populacao1 / area1;
+
+    //Formula para calcular a PIB por percapita.
+    pib_percapita1 = pib1 / populacao1;
+
     //Pulando uma linha para melhorar a visualização
     printf("\n");
 
@@ -59,7 +67,9 @@ int main(){
     printf("População: %d\n", populacao1);
     printf("Área: %.2f Km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
-    printf("Pontos Turísticos: %d", turistico1);
+    printf("Pontos Turísticos: %d\n", turistico1);
+    printf("Densidade Populacional: %.2f\n", densidade1);
+    printf("PIB per Capita: %.2f", pib_percapita1);
 
     //Pulando uma linha para melhorar a visualização
     printf("\n");
@@ -72,6 +82,8 @@ int main(){
     float area2;
     float pib2;
     int turistico2;
+    float densidade2;
+    float pib_percapita2;
 
     printf("\n");
 
@@ -106,6 +118,12 @@ int main(){
     printf("Digite a quantidade de pontos turisticos da sua cidade: ");
     scanf("%d", &turistico2);
 
+        //Formula para calcular a densidade populacional.
+    densidade2 = populacao2 / area2;
+
+    //Formula para calcular a PIB por percapita.
+    pib_percapita2 = pib2 / populacao2;
+
     printf("\n");
 
     printf("CARTA 2:\n");
@@ -114,7 +132,8 @@ int main(){
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f Km²\n", area2);
-    printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Pontos Turísticos: %d", turistico2);
-
+    printf("Densidade Populacional: %.2f\n", densidade2);
+    printf("PIB per Capita: %.2f", pib_percapita2);
 }
