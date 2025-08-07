@@ -5,20 +5,22 @@ int main(){
     /*
     Desenvolver o jogo Super_Trunfo que permita ao usúario inserir os dados 
     de duas cartas Super_trunfo. para cada carta, o usúario deverá fornecer
-    as seguintes informações: Estado, Código da carta, Nome da Cidade, População
+    as seguintes informações: Estado, Código da carta, Nome da Cidade, População,
     Área (em Km²), PIB e Número de pontos turísticos.
     */
 
     //Dados da carta 1
-    char estado1 [10];
+    char estado1;
     char codigo1 [30];
     char cidade1 [50];
     unsigned long int populacao1;
     float area1;
     float pib1;
     int turistico1;
-    float densidade1;
+    float densidade1 = 0.0f;
     float pib_percapita1;
+    float super_poder1;
+   
   
     printf("Digite os dados da 1º carta: \n");
 
@@ -57,6 +59,10 @@ int main(){
     //Formula para calcular a PIB por percapita.
     pib_percapita1 = pib1 / populacao1;
 
+    //Formula para calcular o super poder carta1.
+    super_poder1 = populacao1 + area1 + pib1 + turistico1 + pib_percapita1 + (1 / densidade1);
+
+
     //Pulando uma linha para melhorar a visualização
     printf("\n");
 
@@ -71,19 +77,21 @@ int main(){
     printf("Densidade Populacional: %.2f\n", densidade1);
     printf("PIB per Capita: %.2f", pib_percapita1);
 
+ 
     //Pulando uma linha para melhorar a visualização
     printf("\n");
 
     //Dados da carta 2
-    char estado2 [10];
+    char estado2;
     char codigo2 [30];
     char cidade2 [50];
     unsigned long int populacao2;
     float area2;
     float pib2;
     int turistico2;
-    float densidade2;
+    float densidade2 = 0.0f;
     float pib_percapita2;
+    float super_poder2;
 
     printf("\n");
 
@@ -124,6 +132,9 @@ int main(){
     //Formula para calcular a PIB por percapita.
     pib_percapita2 = pib2 / populacao2;
 
+    //Formula para calcular o super poder carta2.
+    super_poder2 = populacao2 + area2 + pib2 + turistico2 + pib_percapita2 + (1 / densidade2);
+
     printf("\n");
 
     printf("CARTA 2:\n");
@@ -133,7 +144,28 @@ int main(){
     printf("População: %d\n", populacao2);
     printf("Área: %.2f Km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
-    printf("Pontos Turísticos: %d", turistico2);
+    printf("Pontos Turísticos: %d\n", turistico2);
     printf("Densidade Populacional: %.2f\n", densidade2);
     printf("PIB per Capita: %.2f", pib_percapita2);
+
+    int venceu_populacao = populacao1 > populacao2;
+    int venceu_area = area1 > area2;
+    int venceu_pib = pib1 > pib2;
+    int venceu_turistico = turistico1 > turistico2;
+    int venceu_densidade = densidade1 < densidade2; // Menor densidade vence
+    int venceu_pib_percapita = pib_percapita1 > pib_percapita2;
+    int venceu_super_poder = super_poder1 > super_poder2;
+
+    printf("\n");
+    // Resultado da comparação
+    printf("\nComparação de Cartas:\n");
+    printf("População: Carta 1 venceu (%d)\n", venceu_populacao);
+    printf("Área: Carta 1 venceu (%d)\n", venceu_area);
+    printf("PIB: Carta 1 venceu (%d)\n", venceu_pib);
+    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", venceu_turistico);
+    printf("Densidade Populacional: Carta 1 venceu (%d)\n", venceu_densidade);
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", venceu_pib_percapita);
+    printf("Super Poder: Carta 1 venceu (%d)\n", venceu_super_poder);
+
+
 }
