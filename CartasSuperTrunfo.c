@@ -13,7 +13,7 @@ int main(){
     char estado1 [10];
     char codigo1 [30];
     char cidade1 [50];
-    int populacao1;
+    unsigned long int populacao1;
     float area1;
     float pib1;
     int turistico1;
@@ -78,7 +78,7 @@ int main(){
     char estado2 [10];
     char codigo2 [30];
     char cidade2 [50];
-    int populacao2;
+    unsigned long int populacao2;
     float area2;
     float pib2;
     int turistico2;
@@ -91,7 +91,7 @@ int main(){
 
     //Estado: Uma letra de 'A' a 'H' (representando um dos oito estados. tipo char)
     printf("Digite a sigla do seu estado: ");
-    scanf("%s", &estado2);
+    scanf("%c", &estado2);
 
     /* Código da carta: A letra do estado seguida de um núemro de 01 a 04 
     (ex. A01, B03). tipo char [] (uma array de caracteres string) */
@@ -127,7 +127,7 @@ int main(){
     printf("\n");
 
     printf("CARTA 2:\n");
-    printf("Estado: %s\n", estado2);
+    printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
