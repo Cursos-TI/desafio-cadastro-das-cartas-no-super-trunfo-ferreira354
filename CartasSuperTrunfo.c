@@ -24,7 +24,7 @@ int main(){
 
     //Estado: Uma letra de 'A' a 'H' (representando um dos oito estados. tipo char)
     printf("Digite a sigla do seu estado: ");
-    scanf("%s", &estado1);
+    scanf("%c", &estado1);
 
     /* Código da carta: A letra do estado seguida de um núemro de 01 a 04 
     (ex. A01, B03). tipo char [] (uma array de caracteres string) */
@@ -61,7 +61,7 @@ int main(){
     printf("\n");
 
     printf("CARTA 1:\n");
-    printf("Estado: %s\n", estado1);
+    printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", cidade1);
     printf("População: %d\n", populacao1);
